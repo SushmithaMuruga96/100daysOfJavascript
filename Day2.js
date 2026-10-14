@@ -20,3 +20,5 @@ console.log(reverseString("JavaScript")); // Output: "tpircSavaJ"
 console.log(reverseString("Open AI")); // Output: "IAnepO"
 
 console.log(reverseStringWithoutSplit("hello")); // Output: "olleh"
+
+console.log("abc".split("").reverse().join(""));
