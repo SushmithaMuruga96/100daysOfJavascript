@@ -1,3 +1,4 @@
+//Group array of objects by property
 const employees = [
   { name: "Arun", department: "IT" },
   { name: "Priya", department: "HR" },

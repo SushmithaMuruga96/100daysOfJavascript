@@ -1,3 +1,4 @@
+//sort objects by a numeric property
 const employees = [
   { name: "Arun", salary: 5000 },
   { name: "Priya", salary: 8000 },
