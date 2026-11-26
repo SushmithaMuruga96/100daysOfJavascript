@@ -1,3 +1,4 @@
+// btute-force solution time complexity o(n2)
 function twoSum(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
@@ -5,6 +6,18 @@ function twoSum(arr, target) {
         return [arr[i], arr[j]];
       }
     }
+  }
+  return null;
+}
+
+function twoSum(arr, target) {
+  const seen = new Map();
+  for (const current of arr) {
+    const complement = target - current;
+    if (seen.has(complement)) {
+      return [complement, current];
+    }
+    seen.set(current, true);
   }
   return null;
 }
