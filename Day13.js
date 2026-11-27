@@ -10,14 +10,32 @@ function twoSum(arr, target) {
   return null;
 }
 
+//optimized solution
+//maps as key-value pairs and store all types data as keys
+
 function twoSum(arr, target) {
   const seen = new Map();
   for (const current of arr) {
+    console.log(seen);
     const complement = target - current;
     if (seen.has(complement)) {
       return [complement, current];
     }
     seen.set(current, true);
+  }
+  return null;
+}
+
+// Object store keys only in strings or symbols
+function twoSum(arr, target) {
+  const seen = {};
+  for (const current of arr) {
+    console.log(seen);
+    const complement = target - current;
+    if (Object.hasOwn(seen, complement)) {
+      return [complement, current];
+    }
+    seen[current] = true;
   }
   return null;
 }
